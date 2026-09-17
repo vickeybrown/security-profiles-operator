@@ -165,6 +165,14 @@ func (e *e2e) TestSecurityProfilesOperator() {
 			"TLS: Verify TLS profile on OpenShift",
 			e.testCaseTLSProfileOpenShift,
 		},
+		{
+			"TLS: Verify ML-KEM support on OpenShift",
+			e.testCaseMLKEMSupport,
+		},
+		{
+			"TLS: Verify ML-KEM not offered with Intermediate profile",
+			e.testCaseMLKEMNotOfferedWithIntermediateProfile,
+		},
 	}
 	for _, testCase := range testCases {
 		tc := testCase
